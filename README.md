@@ -1,6 +1,11 @@
 # shinyideas
 
-This is a collection of learning matrials and code snippets to get your shiny app to the next levels.
+This is a collection of learning matrials and code snippets to get your shiny app to the next levels. I will dive into 
+
+* Semantic UI: for simpple and beatiful UI
+* Shiny Modules: organize your app as many simple shiny apps. 
+* Apexchart: Open source js charting library
+
 
 ## UI Frameworks
 
@@ -9,7 +14,7 @@ Every homepage uses the same html tags to represent structure and embedd content
 
 
 
-## Intro Semantic UI
+## UI Elements
 
 Provides beatiful css classes that are intuitavely to explore, add and remeber. Code readability is also a plus for semantic css classes. A simple header can be coded by 
 
@@ -32,6 +37,16 @@ If we want to translate this into shiny code we replace html tags with shiny fun
 ```r
 div(class = "ui massive red header", style = "color:#00FF00;", "Hello world")
 ```
+
+At this point it makes sense to go to the official documentation to see other options for the class header or explore other UI elements.
+
+> [semantic-ui](https://semantic-ui.com/elements/header.html)
+
+
+
+
+
+
 
 
 
