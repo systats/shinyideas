@@ -2,14 +2,13 @@
 
 This is a collection of learning matrials and code snippets to get your shiny app to the next levels. I will dive into 
 
-* [Semantic UI](https://semantic-ui.com) for simpple and beatiful UI
+* [Semantic UI](https://semantic-ui.com) For simpple and beatiful UI
     + [shiny.semantic]() Shiny support for powerful Semantic UI library.
     + [semantic.dashboard](https://github.com/Appsilon/semantic.dashboard) Dashboard with Semantic UI Support for Shiny
 * Shiny Modules: organize your app as many simple shiny apps. 
 * [reactlog](https://github.com/rstudio/reactlog) easy reactivity debugger
-* [Apexchart](https://apexcharts.com/) A modern JS charting library to build interactive charts with a simple and open source API. 
-
-    + [apexcharter](https://github.com/dreamRs/apexcharter)
+* [Apexchart](https://apexcharts.com/) A modern JS charting library to build interactive charts with a simple and open source API.
+    + [apexcharter](https://github.com/dreamRs/apexcharter) Apexchart R wrapper
 
 <!---Provides beatiful css classes that are intuitavely to explore, add and remeber. Code readability is also a plus for semantic css classes.--->
 
