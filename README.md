@@ -7,6 +7,8 @@ This is a collection of learning matrials and code snippets to get your shiny ap
 * reactlog: easy reactivity debugger
 * Apexchart: Open source js charting library
 
+<!---Provides beatiful css classes that are intuitavely to explore, add and remeber. Code readability is also a plus for semantic css classes.--->
+
 
 ## Semantic UI
 
@@ -50,7 +52,14 @@ Why do I see this rarely in a shiny app? Because shiny provides you some tidy wr
 
 ### UI Elements
 
-Provides beatiful css classes that are intuitavely to explore, add and remeber. Code readability is also a plus for semantic css classes. A simple header can be coded by 
+This section gives three short examples how to implement semantic ui classes, starting simple with a header, followed by a more complex card and finally an accordion that involves minimal javascript. Sometimes we can use shortcuts to make our life easier like dropdowns, tabsets or boxes which are provided by shiny.semantic. 
+
+
+#### Header
+
+> [semantic-ui header](https://semantic-ui.com/elements/header.html)
+
+A simple header can be coded by 
 
 ```
 <div class = "ui header">Hello world</div>
@@ -74,9 +83,14 @@ div(class = "ui massive red header", style = "color:#00FF00;", "Hello world")
 
 At this point it makes sense to go to the official documentation to see other options for the class header or explore other UI elements.
 
-> [semantic-ui header](https://semantic-ui.com/elements/header.html)
+
+### Card
 
 
+
+
+
+## Accordion
 
 
 
