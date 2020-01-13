@@ -32,9 +32,9 @@ This is build in to semantic ui. You can always enforce your one desired design 
 <div class = "ui massive red header" style = "color:#00FF00;">Hello world</div>
 ```
 
-If we want to translate this into shiny code we replace html tags with shiny functions. With `shiny::tags$...` you can find all html tags implemented as function. Instead of `<tag ...>`we simply call `r tag(...)`. Also instead of plain text, strings with quotation marks have to be used. Space between attributes is not white but seperated by a comma. If you plan to use special html attributes like `for` and `data-tab` we have to treat it as R attribute using tiks ````. 
+If we want to translate this into shiny code we replace html tags with shiny functions. With `shiny::tags$...` you can find all html tags implemented as function. Instead of `<tag ...>`we simply call `tag(...)`. Also instead of plain text, strings with quotation marks have to be used. Space between attributes is not white but seperated by a comma. If you plan to use special html attributes like `for` and `data-tab` we have to treat it as R attribute using tiks ````. 
 
-```r
+```
 div(class = "ui massive red header", style = "color:#00FF00;", "Hello world")
 ```
 
