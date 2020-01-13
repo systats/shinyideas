@@ -45,7 +45,7 @@ shiny::tags$head(
 )
 ```
 
-Why do I see this rarely in a shiny app? Because shiny provides you some tidy wrappers to insert your code dependecies. If you are working with `shinyUI()` or `semanticPage()` this header creation is taken care for you  by generating exactly the code shown above. dashboardPage() is a wrapper to semanticPage that standardizes the input as header, sidebar and footer + adds css and js dependecies. And in the case you what to add custom css and js paths you can call shiny::tags$head() wherever you want in your app. In order to avoid css class conflicts we categorically suppress other UI frameworks with `suppressDependencies("bootstrap")`. Now you know how css and js libraries are loaded into a shiny app. 
+Why do I see this rarely in a shiny app? Because shiny provides you some tidy wrappers to insert your code dependecies. If you are working with `shinyUI()` or `semanticPage()` this header creation is taken care for you  by generating exactly the code shown above. dashboardPage() is a wrapper to semanticPage that standardizes the input as header, sidebar and footer + adds css and js dependecies. And in the case you want to add custom css and js paths you can call shiny::tags$head() wherever you want in your app. In order to avoid css class conflicts we categorically suppress other UI frameworks with `suppressDependencies("bootstrap")`. Now you know how css and js libraries are loaded into a shiny app. 
 
 
 ### UI Elements
