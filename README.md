@@ -33,7 +33,8 @@ No matter what libraries you can load css with
 
 ```
 <head>
-  <link rel="stylesheet" type="text/css" href="...css path...">
+  <link rel="stylesheet" type="text/css" href="...css path..."></link>
+  <script src = "...js pasth..." ></script>
 </head> 
 ```
 
