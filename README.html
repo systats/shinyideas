@@ -380,6 +380,7 @@ summary {
 <ul>
 <li><a href="https://github.com/dreamRs/apexcharter">apexcharter</a> Apexchart R wrapper</li>
 </ul></li>
+<li>shinyuser <a href="https://github.com/systats/shinyuser" class="uri">https://github.com/systats/shinyuser</a></li>
 </ul>
 <!---Provides beatiful css classes that are intuitavely to explore, add and remeber. Code readability is also a plus for semantic css classes.--->
 <div id="semantic-ui" class="section level2">
@@ -396,7 +397,8 @@ summary {
 &lt;/html&gt;</code></pre>
 <p>No matter what libraries you can load css with</p>
 <pre><code>&lt;head&gt;
-  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;...css path...&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;...css path...&quot;&gt;&lt;/link&gt;
+  &lt;script src = &quot;...js pasth...&quot; &gt;&lt;/script&gt;
 &lt;/head&gt; </code></pre>
 <p>href and src can either take a local file in <code>www</code> or you can load a file dynamically from a CDN:</p>
 <p>In shiny this would translate to the following:</p>
@@ -429,6 +431,50 @@ summary {
 <div id="accordion" class="section level2">
 <h2>Accordion</h2>
 <p><a href="https://semantic-ui.com/elements/accordion.html">ui accordion</a></p>
+</div>
+<div id="db" class="section level2">
+<h2>DB</h2>
+<ul>
+<li>SQLiteStudio</li>
+</ul>
+<pre class="r"><code>library(RSQLite)
+
+con &lt;- RSQLite::dbConnect(RSQLite::SQLite(), &quot;my_first_DB.db&quot;)
+
+RSQLite::dbWriteTable(con, &quot;cars&quot;, mtcars)
+RSQLite::dbWriteTable(con, &quot;cars2&quot;, mtcars)
+RSQLite::dbWriteTable(con, &quot;cars3&quot;, mtcars)
+RSQLite::dbWriteTable(con, &quot;cars4&quot;, mtcars)
+
+
+RSQLite::dbListTables(con)
+
+library(dplyr)
+con %&gt;%
+  dplyr::tbl(&quot;cars&quot;) %&gt;%
+  filter(disp &gt; 200) %&gt;%
+  select(1:wt) %&gt;%
+  as_tibble() %&gt;%
+  mutate(ind = stringr::str_detect(mpg, &quot;21&quot;)) 
+
+RSQLite::dbWriteTable(con)
+
+
+RSQLite::dbExecute(con,
+&quot;CREATE TABLE cars10 (
+    mpg  REAL NOT NULL ON CONFLICT IGNORE,
+    cyl  REAL,
+    disp REAL,
+    hp   REAL,
+    drat REAL,
+    wt   REAL,
+    qsec REAL,
+    vs   REAL,
+    am   REAL,
+    gear REAL,
+    carb REAL
+);
+&quot;)</code></pre>
 </div>
 </div>
 

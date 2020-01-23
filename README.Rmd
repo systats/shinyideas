@@ -3,14 +3,20 @@
 This is a collection of learning materials and code snippets to get your shiny app to the next levels. I will dive into 
 
 * [Semantic UI](https://semantic-ui.com) For simpple and beatiful UI
-    + [shiny.semantic]() Shiny support for powerful Semantic UI library.
+    + [shiny.semantic](https://github.com/Appsilon/shiny.semantic) Shiny support for powerful Semantic UI library.
     + [semantic.dashboard](https://github.com/Appsilon/semantic.dashboard) Dashboard with Semantic UI Support for Shiny
 * Shiny Modules: organize your app as many simple shiny apps. 
 * [reactlog](https://github.com/rstudio/reactlog) easy reactivity debugger
 * [Apexchart](https://apexcharts.com/) A modern JS charting library to build interactive charts with a simple and open source API.
     + [apexcharter](https://github.com/dreamRs/apexcharter) Apexchart R wrapper
+    + https://dreamrs.github.io/apexcharter/index.html
+* shinyuser https://github.com/systats/shinyuser
 
 <!---Provides beatiful css classes that are intuitavely to explore, add and remeber. Code readability is also a plus for semantic css classes.--->
+
+* CDN
+    * https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js
+    * https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css
 
 
 ## Semantic UI
@@ -90,13 +96,76 @@ At this point it makes sense to go to the official documentation to see other op
 [ui card](https://semantic-ui.com/elements/card.html)
 
 
-
 ## Accordion
 
 [ui accordion](https://semantic-ui.com/elements/accordion.html)
 
 
 
+## DB
 
+* SQLiteStudio
+
+```{r, eval = F}
+library(RSQLite)
+
+con <- RSQLite::dbConnect(RSQLite::SQLite(), "my_first_DB.db")
+
+RSQLite::dbWriteTable(con, "cars", mtcars)
+RSQLite::dbWriteTable(con, "cars2", mtcars)
+RSQLite::dbWriteTable(con, "cars3", mtcars)
+RSQLite::dbWriteTable(con, "cars4", mtcars)
+
+
+RSQLite::dbListTables(con)
+
+library(dplyr)
+con %>%
+  dplyr::tbl("cars") %>%
+  filter(disp > 200) %>%
+  select(1:wt) %>%
+  as_tibble() %>%
+  mutate(ind = stringr::str_detect(mpg, "21")) 
+
+RSQLite::dbWriteTable(con)
+
+
+RSQLite::dbExecute(con,
+"CREATE TABLE cars10 (
+    mpg  REAL NOT NULL ON CONFLICT IGNORE,
+    cyl  REAL,
+    disp REAL,
+    hp   REAL,
+    drat REAL,
+    wt   REAL,
+    qsec REAL,
+    vs   REAL,
+    am   REAL,
+    gear REAL,
+    carb REAL
+);
+")
+```
+
+
+```{r}
+shiny.semantic::semanticPage(shiny::HTML('<h1 class="ui red header">First header</h1>'))
+```
+
+```{r}
+shiny.semantic::semanticPage(shiny::HTML('
+                                         <div class="ui vertical animated button shiny-btn" tabindex="0" id = "my_button">
+  <div class="hidden content">Shop</div>
+  <div class="visible content">
+    <i class="shop icon"></i>
+  </div>
+</div>
+                                         '))
+
+
+'<button id="my_button" type="button" class="ui vertical animated button action-button">MY</button>'
+
+shiny.semantic::semanticPage(shiny::actionButton("my_button", label = "MY", class = "ui vertical animated button"))
+```
 
 
