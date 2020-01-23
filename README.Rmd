@@ -1,3 +1,12 @@
+---
+title: "Untitled"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T, eval = F)
+```
+
 # shinyideas
 
 This is a collection of learning materials and code snippets to get your shiny app to the next levels. I will dive into 
@@ -153,19 +162,19 @@ shiny.semantic::semanticPage(shiny::HTML('<h1 class="ui red header">First header
 ```
 
 ```{r}
-shiny.semantic::semanticPage(shiny::HTML('
-                                         <div class="ui vertical animated button shiny-btn" tabindex="0" id = "my_button">
-  <div class="hidden content">Shop</div>
-  <div class="visible content">
-    <i class="shop icon"></i>
-  </div>
-</div>
-                                         '))
-
-
-'<button id="my_button" type="button" class="ui vertical animated button action-button">MY</button>'
-
-shiny.semantic::semanticPage(shiny::actionButton("my_button", label = "MY", class = "ui vertical animated button"))
+# shiny.semantic::semanticPage(shiny::HTML('
+#                                          <div class="ui vertical animated button shiny-btn" tabindex="0" id = "my_button">
+#   <div class="hidden content">Shop</div>
+#   <div class="visible content">
+#     <i class="shop icon"></i>
+#   </div>
+# </div>
+#                                          '))
+# 
+# 
+# '<button id="my_button" type="button" class="ui vertical animated button action-button">MY</button>'
+# 
+# shiny.semantic::semanticPage(shiny::actionButton("my_button", label = "MY", class = "ui vertical animated button"))
 ```
 
 
