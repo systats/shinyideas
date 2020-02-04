@@ -2,7 +2,7 @@
 # shinyideas
 
 This is a collection of learning materials and code snippets to get your
-shiny app to the next levels. I will dive into
+shiny app to the next levels. We will dive into
 
   - [Semantic UI](https://semantic-ui.com) For simpple and beatiful UI
       - [shiny.semantic](https://github.com/Appsilon/shiny.semantic)
@@ -10,24 +10,35 @@ shiny app to the next levels. I will dive into
         library.
       - [semantic.dashboard](https://github.com/Appsilon/semantic.dashboard)
         Dashboard with Semantic UI Support for Shiny
-  - Shiny Modules: organize your app as many simple shiny apps.
-  - [reactlog](https://github.com/rstudio/reactlog) easy reactivity
-    debugger
-  - [Apexchart](https://apexcharts.com/) A modern JS charting library to
-    build interactive charts with a simple and open source API.
-      - [apexcharter](https://github.com/dreamRs/apexcharter) Apexchart
-        R wrapper
-      - <https://dreamrs.github.io/apexcharter/index.html>
-  - shinyuser
-<https://github.com/systats/shinyuser>
-
-<!---Provides beatiful css classes that are intuitavely to explore, add and remeber. Code readability is also a plus for semantic css classes.--->
-
-  - CDN
-      - <https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js>
-      - <https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css>
+  - Architecture:
+      - Shiny Modules: organize your app as many simple shiny apps.
+          - <https://github.com/strboul/supreme>
+  - Visuals:
+      - [Apexchart](https://apexcharts.com/) A modern JS charting
+        library to build interactive charts with a simple and open
+        source API.
+          - [`apexcharter`](https://github.com/dreamRs/apexcharter)
+            Apexchart R wrapper
+          - <https://dreamrs.github.io/apexcharter/index.htm>
+  - Extensions:
+      - `shinyjs`: inject javascript into your UI
+      - [`shinyuser`](https://github.com/systats/shinyuser) login and
+        user managment tools
+  - Tools:
+      - [`reactlog`](https://github.com/rstudio/reactlog) easy
+        reactivity debugger
+      - [`html2r`](https://github.com/alandipert/html2r) Convert HTML to
+        R
 
 ## Semantic UI
+
+Like on CRAN you can load and download any serious web package from
+static servers:
+
+  - semantic
+        UI
+      - <https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js>
+      - <https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css>
 
 Every homepage uses the same html tags to represent structure and embed
 content. So the first decision in web development is usually which css
