@@ -1,27 +1,25 @@
-pacman::p_load(tidyverse, shiny.semantic, reactlog)
+pacman::p_load(tidyverse, shiny, shiny.semantic)
+#devtools::document()
+devtools::load_all()
+devtools::install()
 
-#options(shiny.reactlog = TRUE)
-
-source("mods/my_mod.R")
+# dir("../R")
 
 ui <- shiny.semantic::semanticPage(
-  div( class = "ui text container",
-    
-    div(class = "ui red header", "Hello World"),
-    my_ui("my1"),
-    my_ui("my2")
+  tagList(
+    toggle_input("first"),
+    toggle_input("second", class = "slider"),
+    toggle_input("third", class = "toggle")
   )
 )
 
 
-server <- function(input, output, session) {
+s <- function(input, output, session){
   
-  callModule(my_server, "my1")
-  callModule(my_server, "my2")
-
+  observe({
+    print(input$first)
+  })
 }
 
-shiny::shinyApp(ui, server)
 
-
-#shiny::reactlogShow()
+shiny::shinyApp(ui, s)

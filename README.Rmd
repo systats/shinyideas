@@ -1,6 +1,8 @@
 ---
-output: github_document
+output: html_document
 ---
+
+<!-- #github_document -->
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = T, eval = F)
@@ -187,4 +189,18 @@ shiny.semantic::semanticPage(shiny::HTML('<h1 class="ui red header">First header
 # shiny.semantic::semanticPage(shiny::actionButton("my_button", label = "MY", class = "ui vertical animated button"))
 ```
 
+
+
+
+
+
+
+```{r, eval = T}
+# devtools::document()
+devtools::load_all()
+#
+
+# "$('.ui.checkbox').checkbox();"
+
+```
 

@@ -205,3 +205,15 @@ shiny.semantic::semanticPage(shiny::HTML('<h1 class="ui red header">First header
 # 
 # shiny.semantic::semanticPage(shiny::actionButton("my_button", label = "MY", class = "ui vertical animated button"))
 ```
+
+``` r
+# devtools::document()
+devtools::load_all()
+pacman::p_load(tidyverse, shiny, shiny.semantic)
+
+shiny.semantic::semanticPage(
+  toggle_input("nice"),
+  toggle_input("nice1", slider = T),
+  toggle_input("nice2", toggle = T)
+)
+```
