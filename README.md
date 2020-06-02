@@ -4,6 +4,7 @@
 This is a collection of learning materials and code snippets to get your
 shiny app to the next levels. We will dive into
 
+  - You want new app features check out [awesome-shiny-extensions](https://github.com/nanxstats/awesome-shiny-extensions)
   - [Semantic UI](https://semantic-ui.com) For simpple and beatiful UI
       - [shiny.semantic](https://github.com/Appsilon/shiny.semantic)
         Shiny support for powerful Semantic UI
